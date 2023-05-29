@@ -8,3 +8,7 @@ def get_tracker(request):
         'tracker': trackers
     }
     return render(request, "tracker/tracker.html", context)
+
+
+def add_trade(request):
+    return render(request, "tracker/add_trade.html")
