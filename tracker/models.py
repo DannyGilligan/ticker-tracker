@@ -12,3 +12,8 @@ class Tracker(models.Model):
     date_closed = models.DateField(null=True, blank=True)
     profit_loss = models.DecimalField(max_digits=8, decimal_places=2, null=True, blank=True)
     result = models.CharField(max_length= 4, null=True, blank=True) 
+
+# Shows Ticker names in Tracker model instead of generic object value
+
+    def __str__(self):
+        return self.ticker
