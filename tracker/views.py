@@ -1,6 +1,10 @@
 from django.shortcuts import render
-
+from .models import Tracker
 # Create your views here.
 
 def get_tracker(request):
-    return render(request, "tracker/tracker.html")
+    trackers = Tracker.objects.all()
+    context = {
+        'tracker': trackers
+    }
+    return render(request, "tracker/tracker.html", context)
