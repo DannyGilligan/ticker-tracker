@@ -8,10 +8,35 @@
 </head>
 <body>
     <h1>Ticker Tracker</h1>
-    {{ tracker }}
 
-
-
+    <table>
+        <th>Status</th>
+        <th>Ticker</th>
+        <th>Position</th>
+        <th>Date Opened</th>
+        <th>Trade ($)</th>
+        <th>Opening ($)</th>
+        <th>Closing ($)</th>
+        <th>Date Closed</th>
+        <th>Profit/Loss ($)</th>
+        <th>Result</th>
+        {% for ticker in tracker%}
+        <tr>
+            <td>{{ ticker.status }}</td>
+            <td>{{ ticker.ticker }}</td>
+            <td>{{ ticker.position }}</td>
+            <td>{{ ticker.date_opened }}</td>
+            <td>{{ ticker.amount_traded }}</td>
+            <td>{{ ticker.opening_price }}</td>
+            <td>{{ ticker.closing_price }}</td>
+            <td>{{ ticker.date_closed }}</td>
+            <td>{{ ticker.profit_loss }}</td>
+            <td>{{ ticker.result }}</td>
+        </tr>
+        {% empty %}
+        <tr><td>There are currently no trades to track</td></tr>
+        {% endfor %}
+    </table>
 
 </body>
 </html>
