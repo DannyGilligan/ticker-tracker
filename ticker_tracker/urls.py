@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from tracker.views import say_hello
+from tracker.views import get_tracker
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    
+    path('', get_tracker, name='get_tracker')
 ]
