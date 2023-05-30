@@ -32,6 +32,11 @@ def add_trade(request):
 
 def edit_trade(request, ticker_id):
     ticker = get_object_or_404(Tracker, id =ticker_id)
+        if request.method == 'POST':
+        form = TradeForm(request.POST, instance=ticker)
+        if form.is_valid():
+            form.save()
+            return redirect('get_tracker')
     form = TradeForm(instance=ticker)
     context = {
         'form': form
