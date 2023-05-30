@@ -2,12 +2,17 @@ from django.shortcuts import render, redirect
 from .models import Tracker
 # Create your views here.
 
+# View for the main tracker that will render all ticker related objects (opening price, closing price etc).
+
 def get_tracker(request):
     trackers = Tracker.objects.all()
     context = {
         'tracker': trackers
     }
     return render(request, 'tracker/tracker.html', context)
+
+
+# View for the Add Trade form that will allow user to add a new trade with all related parameters, and then redirect the user back to the Tracker once submitted.
 
 def add_trade(request):
     if request.method == 'POST':

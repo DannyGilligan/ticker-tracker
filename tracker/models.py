@@ -1,6 +1,9 @@
 from django.db import models
 
 # Create your models here.
+
+# Main model for the Tracker to be displayed to the user and stored in the database.
+
 class Tracker(models.Model):
     status = models.CharField(max_length= 6, null=False, blank=False)
     ticker = models.CharField(max_length= 8, null=False, blank=False) 
