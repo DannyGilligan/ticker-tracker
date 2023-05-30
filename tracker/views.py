@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Tracker
 # Create your views here.
 
@@ -17,6 +17,7 @@ def add_trade(request):
         date_opened = request.POST.get('trade_date_opened')
         amount_traded = request.POST.get('trade_amount')
         opening_price = request.POST.get('trade_opening_price')
-        Item.objects.create(status=status, ticker=ticker, position=position, date_opened=date_opened, amount_traded=amount_traded, opening_price=opening_price)
+        Tracker.objects.create(status=status, ticker=ticker, position=position, date_opened=date_opened, amount_traded=amount_traded, opening_price=opening_price)
         
+        return redirect('get_tracker')
     return render(request, 'tracker/add_trade.html')
