@@ -10,7 +10,7 @@
     <h1>Add a Trade</h1>
     <form method="POST" action="add_trade">
         {% csrf_token %}
-        {{ form }}
+        {{ form.as_p }}
         
 
         <div>
