@@ -28,7 +28,7 @@ def add_trade(request):
     }
     return render(request, 'tracker/add_trade.html', context)
 
-# View to Edit trades
+# View to Edit trades, this will render the edit_trade.html page
 
 def edit_trade(request, ticker_id):
     return render(request, 'tracker/edit_trade.html')

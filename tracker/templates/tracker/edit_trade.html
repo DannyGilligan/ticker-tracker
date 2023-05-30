@@ -7,15 +7,15 @@
     <title>Ticker Tracker</title>
 </head>
 <body>
-    <h1>Add a Trade</h1>
-    <form method="POST" action="add_trade">
+    <h1>Edit a Trade</h1>
+    <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
         
 
         <div>
             <p>
-                <button type="submit">Add Trade</button>
+                <button type="submit">Update Trade</button>
             </p>
         </div>
 
