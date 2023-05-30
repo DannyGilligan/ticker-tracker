@@ -3,9 +3,9 @@ from .forms import TradeForm
 
 # Create your tests here.
 
-#This will test the required fields that are needed on the TradeForm in order to add a trade to the tracker. The code for this was taken from the Code Institute LMS (testing forms section)
+#These will test the required fields that are needed on the TradeForm in order to add a trade to the tracker. The code for this was taken from the Code Institute LMS (testing forms section)
 
-class TestDjango(TestCase):
+class TestForms(TestCase):
 
     def test_trade_status_required(self):
         form = TradeForm({'status': ''})
