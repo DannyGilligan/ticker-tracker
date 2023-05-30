@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Tracker
 from .forms import TradeForm
+from .forms import EditTradeForm
 
 # Create your views here.
 
@@ -32,12 +33,12 @@ def add_trade(request):
 
 def edit_trade(request, ticker_id):
     ticker = get_object_or_404(Tracker, id =ticker_id)
-        if request.method == 'POST':
-        form = TradeForm(request.POST, instance=ticker)
+    if request.method == 'POST':
+        form = EditTradeForm(request.POST, instance=ticker)
         if form.is_valid():
             form.save()
             return redirect('get_tracker')
-    form = TradeForm(instance=ticker)
+    form = EditTradeForm(instance=ticker)
     context = {
         'form': form
     }
