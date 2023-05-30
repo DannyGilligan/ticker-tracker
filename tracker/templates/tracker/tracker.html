@@ -1,27 +1,29 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type='text/css' href="{% static 'css/style.css' %}">
     <title>Ticker Tracker</title>
 </head>
 <body>
     <h1>Ticker Tracker</h1>
 
     <table>
-        <th>Status</th>
-        <th>Ticker</th>
-        <th>Position</th>
-        <th>Date Opened</th>
-        <th>Trade ($)</th>
-        <th>Opening ($)</th>
-        <th>Closing ($)</th>
-        <th>Date Closed</th>
-        <th>Profit/Loss ($)</th>
-        <th>Result</th>
+        <th class="table_header">Status</th>
+        <th class="table_header">Ticker</th>
+        <th class="table_header">Position</th>
+        <th class="table_header">Date Opened</th>
+        <th class="table_header">Trade ($)</th>
+        <th class="table_header">Opening ($)</th>
+        <th class="table_header">Closing ($)</th>
+        <th class="table_header">Date Closed</th>
+        <th class="table_header">Profit/Loss ($)</th>
+        <th class="table_header">Result</th>
         {% for ticker in tracker%}
-        <tr>
+        <tr class="table_row">
             <td>{{ ticker.status }}</td>
             <td>{{ ticker.ticker }}</td>
             <td>{{ ticker.position }}</td>
@@ -34,12 +36,12 @@
             <td>{{ ticker.result }}</td>
             <td>
                 <a href="/edit_trade/ {{ ticker.id }}">
-                    <button>Edit Trade</button>
+                    <button class="edit_button">Edit Trade</button>
                 </a>
             </td>
             <td>
                 <a href="/delete_trade/ {{ ticker.id }}">
-                    <button>Delete Trade</button>
+                    <button class="delete_button">Delete Trade</button>
                 </a>
             </td>
         </tr>
@@ -47,7 +49,7 @@
         <tr><td>There are currently no trades to track</td></tr>
         {% endfor %}
     </table>
-    <a href="/add_trade"><button>Add a Trade</button></a>
+    <a href="/add_trade"><button class="add_button">Add a Trade</button></a>
 
 </body>
 </html>

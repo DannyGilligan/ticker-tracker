@@ -130,6 +130,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# The code was taken from a YouTube Tutorial by Bek Brace https://youtu.be/3zxMVZGhmuY
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 

@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+table {
+    margin: 3rem;
+}
+
+h1 {
+    margin: 3rem;
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.table_header {
+    padding: .5rem;
+    background-color: darkblue;
+    color: white;
+    font-size: 1rem;
+}
+
+
+td {
+    margin: .5rem;
+    padding: .5rem;
+    border-bottom: 1px solid black;
+}
+
+
+.add_button {
+    margin-left: 3rem;
+    font-size: 1rem;
+    padding: .4rem;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+.edit_button {
+    margin-left: 3rem;
+    font-size: 1rem;
+    padding: .4rem;
+    background-color: darkblue;
+    color: white;
+    border-radius: 10px;
+}
+
+.delete_button {
+    margin-left: 3rem;
+    font-size: 1rem;
+    padding: .4rem;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+}
