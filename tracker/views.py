@@ -5,7 +5,7 @@ from .forms import EditTradeForm
 
 # Create your views here.
 
-# View for the main tracker that will render all ticker related objects (opening price, closing price etc).
+# View for the main tracker that will render all ticker related objects in the table appearing in tracker.html (opening price, closing price etc).
 
 def get_tracker(request):
     trackers = Tracker.objects.all()
@@ -46,3 +46,11 @@ def edit_trade(request, ticker_id):
         'form': form
     }
     return render(request, 'tracker/edit_trade.html', context)
+
+
+# View to allow the user to delete a trade from the tracker 
+
+def delete_trade(request, ticker_id):
+    ticker = get_object_or_404(Tracker, id=ticker_id)
+    ticker.delete()
+    return redirect('get_tracker')

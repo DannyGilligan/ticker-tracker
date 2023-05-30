@@ -37,6 +37,11 @@
                     <button>Edit Trade</button>
                 </a>
             </td>
+            <td>
+                <a href="/delete_trade/ {{ ticker.id }}">
+                    <button>Delete Trade</button>
+                </a>
+            </td>
         </tr>
         {% empty %}
         <tr><td>There are currently no trades to track</td></tr>
