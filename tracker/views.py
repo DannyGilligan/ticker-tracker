@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Tracker
 from .forms import TradeForm
 
@@ -31,4 +31,9 @@ def add_trade(request):
 # View to Edit trades, this will render the edit_trade.html page
 
 def edit_trade(request, ticker_id):
-    return render(request, 'tracker/edit_trade.html')
+    ticker = get_object_or_404(Tracker, id =ticker_id)
+    form = TradeForm(instance=ticker)
+    context = {
+        'form': form
+    }
+    return render(request, 'tracker/edit_trade.html', context)
