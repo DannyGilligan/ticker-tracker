@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-&1412z#e#5b7)57o(sp$k!6kvl=%a_3^%ne52p@ycb@3cz2f6*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ticker-tracker.herokuapp.com']
+ALLOWED_HOSTS = ['ticker-tracker.herokuapp.com', 'localhost']
 
 
 # Application definition
