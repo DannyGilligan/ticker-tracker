@@ -9,7 +9,7 @@
 <body>
     <h1>Add a Trade</h1>
     <form method="POST" action="add_trade">
-        {% carf_token %}
+        {% csrf_token %}
         <div>
             <p>
                 <label for="id_status">Status: </label>
