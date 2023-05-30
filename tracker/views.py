@@ -15,7 +15,8 @@ def get_tracker(request):
     return render(request, 'tracker/tracker.html', context)
 
 
-# View for the Add Trade form that will allow user to add a new trade with all related parameters, and then redirect the user back to the Tracker once submitted.
+
+# View for the Add Trade form that will allow user to add a new trade with all related parameters, and then redirect the user back to the Tracker once submitted. The view pulls in the TradeForm that has an abbreviated number of fields that are confined only to those necessary for opening a new trade (to improve the UX)
 
 def add_trade(request):
     if request.method == 'POST':
@@ -29,7 +30,9 @@ def add_trade(request):
     }
     return render(request, 'tracker/add_trade.html', context)
 
-# View to Edit trades, this will render the edit_trade.html page
+
+
+# View to Edit trades, this will render the edit_trade.html page, it also used the EditTradeForm to show all editable fields (as opposed to only those fields necessary to add a new trade in TradeForm)
 
 def edit_trade(request, ticker_id):
     ticker = get_object_or_404(Tracker, id =ticker_id)
