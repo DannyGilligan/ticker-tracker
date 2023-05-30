@@ -32,12 +32,17 @@
             <td>{{ ticker.date_closed }}</td>
             <td>{{ ticker.profit_loss }}</td>
             <td>{{ ticker.result }}</td>
+            <td>
+                <a href="/edit/ {{ ticker.id }}">
+                    <button>Edit Trade</button>
+                </a>
+            </td>
         </tr>
         {% empty %}
         <tr><td>There are currently no trades to track</td></tr>
         {% endfor %}
     </table>
-    <a href="/add_trade">Add a Trade</a>
+    <a href="/add_trade"><button>Add a Trade</button></a>
 
 </body>
 </html>
