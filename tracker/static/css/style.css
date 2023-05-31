@@ -21,7 +21,7 @@ h1 {
 
 .table_header {
     padding: .5rem;
-    background-color: rgb(27, 121, 31);
+    background-color: black;
     color: white;
     font-size: 1rem;
     border-radius: 5px;
@@ -48,7 +48,7 @@ td {
     margin-left: 1rem;
     font-size: 1rem;
     padding: .4rem;
-    background-color: darkblue;
+    background-color: rgb(30, 145, 58);
     color: white;
     border-radius: 10px;
 }
