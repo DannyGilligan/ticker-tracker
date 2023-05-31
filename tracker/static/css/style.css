@@ -1,28 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 
 
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 table {
     margin: 3rem;
     border: 1px solid black;
+    border-radius: 10px;
 }
 
 h1 {
     margin: 3rem;
-    font-size: 3rem;
-    font-weight: 400;
+    font-size: 4rem;
+    font-weight: 600;
 }
 
 .table_header {
     padding: .5rem;
-    background-color: darkblue;
+    background-color: rgb(27, 121, 31);
     color: white;
     font-size: 1rem;
+    border-radius: 5px;
 }
 
 
@@ -35,7 +37,7 @@ td {
 
 .add_button {
     margin-left: 3rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
     padding: .4rem;
     background-color: black;
     color: white;
