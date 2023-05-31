@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-&1412z#e#5b7)57o(sp$k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = development
 
-ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
+ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME'), 'localhost']
 
 
 # Application definition
@@ -79,19 +79,16 @@ TEMPLATES = [
 WSGI_APPLICATION = 'ticker_tracker.wsgi.application'
 
 
-if development
-    Database
-    https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
+if development:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
+            'NAME': os/path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
 else:
     DATABASES = {
-        "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
 
 
