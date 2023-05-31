@@ -36,7 +36,7 @@ DEBUG = development
 if development:
     ALLOWED_HOSTS = ['localhost', '8000-dannygillig-tickertrack-dwku3tyoy2j.ws-eu98.gitpod.io']
 else:
-    ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
+    ALLOWED_HOSTS = ['ticker-tracker.herokuapp.com/']
 
 
 # Application definition
